@@ -172,9 +172,9 @@ p{
 .apu-image-1, .apu-image-2, .apu-image-3{
   position: absolute;
   top: 160px;
-  left: 600px;
+  left: 500px;
   width: 800px;
-  height: 588px;
+  height: 630px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 85%;
