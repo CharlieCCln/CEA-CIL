@@ -59,7 +59,7 @@
 
   // Get a prediction for the current video frame
   function classifyVideo() {
-    classifier.classify(flippedVideo, gotResult);
+    classifier.classify(video, gotResult);
     flippedVideo.remove();
 
   }
