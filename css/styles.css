@@ -35,7 +35,7 @@ overflow:hidden;
   top: 32px;
   left: 32px;
   display: flex;
-  align-items: bottom;
+  align-items: center;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -65,6 +65,7 @@ span{
 .titre{
   font-size: 50pt;
   margin-right: 24px;
+  margin-top: 12px;
 }
 
 .role, .fonctionnement, .innovations{
