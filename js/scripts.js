@@ -4,9 +4,12 @@
   let imageModelURL = 'https://teachablemachine.withgoogle.com/models/90SoxnKhs/';
 
   // Video
-  let video;
+  let capture;
+  let flippedVideo;
   // To store the classification
   let label = "";
+
+  let ratio;
 
   // Load the model first
   function preload() {
@@ -40,7 +43,7 @@
   // Get a prediction for the current video frame
   function classifyVideo() {
     classifier.classify(video, gotResult);
-    video.remove();
+    flippedVideo.remove();
 
   }
 
@@ -55,7 +58,6 @@
     // The results are in an array ordered by confidence.
     // console.log(results[0]);
     label = results[0].label;
-    console.log(label);
     // Classifiy again!
     classifyVideo();
 
