@@ -27,7 +27,7 @@
      }
    });
     video.size(windowWidth, windowHeight);
-    video.elt.setAttribute('playsinline');
+//    video.elt.setAttribute('playsinline');
     video.hide();
 
     flippedVideo = ml5.flipImage(video);
