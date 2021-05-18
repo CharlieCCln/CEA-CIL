@@ -37,8 +37,11 @@
 
   function draw() {
     background(150);
+    text(frameCount, 200, 200);
     // Draw the video
-    image(flippedVideo, 0, 0, width, width * video.height / video.width);
+    if (frameCount > 100) {
+      image(flippedVideo, 0, 0, width, width * video.height / video.width);
+    }
 
     // Draw the label
     fill(255);
