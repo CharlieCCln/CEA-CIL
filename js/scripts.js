@@ -72,6 +72,8 @@
       return;
     }
 
+    console.log(results);
+
     // The results are in an array ordered by confidence.
     // console.log(results[0]);
     if (labels[results[0].label] == undefined) {
