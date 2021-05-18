@@ -1,7 +1,7 @@
 // Classifier Variable
   let classifier;
   // Model URL
-  let imageModelURL = 'https://teachablemachine.withgoogle.com/models/90SoxnKhs/';
+  let imageModelURL = 'https://teachablemachine.withgoogle.com/models/SPfvBqa_U/';
 
   // Video
   let capture;
@@ -43,15 +43,15 @@
     // Draw the video
     image(video, 0, 0, width, width * video.height / video.width);
 
-    if(label == "Vide"){
+    if(label == "vide"){
       $(".composant").hide();
       $(".usage").hide();
     }
-    if(label == "Apu"){
+    if(label == "apu"){
       $(".usage").hide();
       $(".composant").show();
     }
-    if(label == "Gps"){
+    if(label == "gps"){
       $(".composant").hide();
       $(".usage").show();
     }
