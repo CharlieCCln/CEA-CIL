@@ -201,6 +201,12 @@ p{
 canvas{
   /* z-index: -2 !important; */
   position: relative;
+z-index:1;
+}
+
+#page {
+  position:relative;
+  z-index:2;
 }
 
 video{
