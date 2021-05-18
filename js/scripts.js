@@ -42,6 +42,19 @@
     background(0);
     // Draw the video
     image(video, 0, 0, width, width * video.height / video.width);
+
+    if(label == "vide"){
+      $(".composant").hide();
+      $(".usage").hide();
+    }
+    if(label == "apu"){
+      $(".usage").hide();
+      $(".composant").show();
+    }
+    if(label == "gps"){
+      $(".composant").hide();
+      $(".usage").show();
+    }
   }
 
   // Get a prediction for the current video frame
