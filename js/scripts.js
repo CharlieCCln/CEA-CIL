@@ -89,6 +89,8 @@
       }
     });
 
+    console.log(labels);
+
     listenCount = 0;
     labels = {};
   }
