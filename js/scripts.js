@@ -43,15 +43,15 @@
     // Draw the video
     image(video, 0, 0, width, width * video.height / video.width);
 
-    if(label == "vide"){
+    if(label == "Vide"){
       $(".composant").hide();
       $(".usage").hide();
     }
-    if(label == "apu"){
+    if(label == "Apu"){
       $(".usage").hide();
       $(".composant").show();
     }
-    if(label == "gps"){
+    if(label == "Gps"){
       $(".composant").hide();
       $(".usage").show();
     }
