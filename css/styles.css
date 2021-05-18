@@ -151,7 +151,7 @@ p{
   position: absolute;
   top: 160px;
   left: 48px;
-  height: 630px;
+  height: 650px;
 }
 
 .ui-slider, .ui-slider-handle{
@@ -172,9 +172,9 @@ p{
 .apu-image-1, .apu-image-2, .apu-image-3{
   position: absolute;
   top: 160px;
-  left: 500px;
-  width: 800px;
-  height: 630px;
+  left: 550px;
+  width: 750px;
+  height: 650px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 85%;
