@@ -8,6 +8,9 @@
   let flippedVideo;
   // To store the classification
   let label = "";
+  let labels = {};
+  let listenCount = 0;
+  let listenCountMax = 60;
 
   let ratio;
 
@@ -59,7 +62,24 @@
 
     // The results are in an array ordered by confidence.
     // console.log(results[0]);
-    label = results[0].label;
+    if (labels[results[0].label] == undefined) {
+    labels[results[0].label] = 0;
+  }
+
+  labels[results[0].label]++;
+  listenCount++;
+
+  if (listenCount >= listenCountMax) {
+    let most = 0;
+    Object.keys(labels).forEach(l => {
+      if (labels[l] >= most) {
+        label = l;
+      }
+    });
+
+    listenCount = 0;
+    labels = {};
+  }
     console.log(label);
     // Classifiy again!
     classifyVideo();
