@@ -13,8 +13,7 @@ height: auto;
 margin:0;
 padding:0;
 background-color: #000000;
-
-  overflow:hidden;
+overflow:hidden;
 }
 
 .composant, .usage{
@@ -36,7 +35,7 @@ background-color: #000000;
   top: 32px;
   left: 32px;
   display: flex;
-  align-items: center;
+  align-items: bottom;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -65,14 +64,14 @@ span{
 
 .titre{
   font-size: 50pt;
-  padding-right: 24px;
+  margin-right: 24px;
 }
 
 .role, .fonctionnement, .innovations{
   position: absolute;
   left: 96px;
   top: 160px;
-  width: 432px;
+  width: 375px;
   height: auto;
   padding: 24px;
   -webkit-touch-callout: none;
@@ -136,7 +135,7 @@ p{
   position: absolute;
   left: 32px;
   top: 256px;
-  width: 432px;
+  width: 375px;
   height: auto;
   padding: 24px;
 }
@@ -150,7 +149,7 @@ p{
   position: absolute;
   top: 160px;
   left: 48px;
-  height: 588px;
+  height: 750px;
 }
 
 .ui-slider, .ui-slider-handle{
