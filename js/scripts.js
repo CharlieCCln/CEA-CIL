@@ -27,14 +27,16 @@
      }
    });
     video.size(windowWidth, windowHeight);
+    //video.elt.setAttribute('playsinline');
+    //video.hide();
 
+    flippedVideo = ml5.flipImage(video);
     // Start classifying
     classifyVideo();
   }
 
   function draw() {
     background(0);
-
     // Draw the video
     image(video, 0, 0, width, width * video.height / video.width);
 
@@ -42,7 +44,7 @@
 
   // Get a prediction for the current video frame
   function classifyVideo() {
-    classifier.classify(video, gotResult);
+    classifier.classify(flippedVideo, gotResult);
     flippedVideo.remove();
 
   }
@@ -58,6 +60,7 @@
     // The results are in an array ordered by confidence.
     // console.log(results[0]);
     label = results[0].label;
+    console.log(label);
     // Classifiy again!
     classifyVideo();
 
