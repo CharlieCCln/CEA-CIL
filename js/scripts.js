@@ -27,8 +27,8 @@
      }
    });
     video.size(windowWidth, windowHeight);
-    video.elt.setAttribute('playsinline',true);
-    video.hide();
+    //video.elt.setAttribute('playsinline');
+    //video.hide();
 
     flippedVideo = ml5.flipImage(video);
     // Start classifying
@@ -38,7 +38,7 @@
   function draw() {
     background(150);
     // Draw the video
-    image(video, 0, 0, width, width * video.height / video.width);
+    image(flippedVideo, 0, 0, width, width * video.height / video.width);
 
     // Draw the label
     fill(255);
