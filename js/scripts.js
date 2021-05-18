@@ -42,8 +42,6 @@
     background(0);
     // Draw the video
     image(video, 0, 0, width, width * video.height / video.width);
-
-    if()
   }
 
   // Get a prediction for the current video frame
