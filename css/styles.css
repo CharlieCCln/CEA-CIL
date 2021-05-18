@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "AvenirHeavy";
+  src: url("../assets/AvenirLTStd-Heavy.otf");
+}
+
+@font-face {
+  font-family: "AvenirRoman";
+  src: url("../assets/AvenirLTStd-Roman.otf");
+}
+
+body {
+height: auto;
+margin:0;
+padding:0;
+background-color: #000000;
+overflow: hidden;
+}
+
+.composant, .usage{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.block{
+  background-color: #ffffff;
+  border-radius: 24px;
+}
+
+.header{
+  height: 96px;
+  width: auto;
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cea-logo{
+  height: 64px;
+  width: 78.7px;
+  border-radius: 12px;
+  margin-left: 16px;
+  margin-right: 24px;
+  background-image: url("../assets/Logo_Leti.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 64px;
+}
+
+span{
+  font-family: "AvenirHeavy";
+  color: #B81420;
+  font-size: 18pt;
+}
+
+.titre{
+  font-size: 50pt;
+  padding-right: 24px;
+}
+
+.role, .fonctionnement, .innovations{
+  position: absolute;
+  left: 96px;
+  top: 160px;
+  width: 432px;
+  height: auto;
+  padding: 24px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.fonctionnement{
+  top: 364px;
+}
+
+.innovations{
+  top: 568px;
+}
+
+p{
+  font-family: "AvenirRoman";
+  color: #000000;
+  font-size: 14pt;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.usage{
+  display: none;
+}
+
+.row{
+  position: absolute;
+  top: 160px;
+  left: 32px;
+  width: calc(100% - 64px);
+  height: 64px;
+}
+
+.usage-composants{
+  border-radius: 16px;
+  height: 64px;
+  display: inline-flex;
+  padding-left: 24px;
+  padding-right: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.usage-composants:hover{
+  cursor: pointer;
+}
+
+.usage-gps-role{
+  position: absolute;
+  left: 32px;
+  top: 256px;
+  width: 432px;
+  height: auto;
+  padding: 24px;
+}
+
+.usage-composants-selected{
+  background-color: #B81420;
+  color: #ffffff;
+}
+
+#slider{
+  position: absolute;
+  top: 160px;
+  left: 48px;
+  height: 588px;
+}
+
+.ui-slider, .ui-slider-handle{
+  border-radius: 24px !important;
+  border: 5px solid #B81420 !important;
+  background-color: #ffffff !important;
+}
+
+.ui-slider-handle{
+  position: absolute !important;
+  left: -14px !important;
+}
+
+.ui-state-active{
+  color: #ffffff !important;
+}
+
+.apu-image-1, .apu-image-2, .apu-image-3{
+  position: absolute;
+  top: 160px;
+  left: 600px;
+  width: 800px;
+  height: 588px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 85%;
+}
+
+.apu-image-1{
+  background-image: url("../assets/apu-image-1.jpg");
+}
+
+.apu-image-2{
+  background-image: url("../assets/apu-image-2.jpg");
+}
+
+.apu-image-3{
+  background-image: url("../assets/apu-image-3.jpg");
+}
+
+#video{
+  width: 100vw;
+  height: auto;
+  left: 0;
+  top: 0;
+  margin: 0;
+}
+
+canvas{
+  z-index: -2 !important;
+  position: relative;
+}
+
+video{
+  z-index: -1;
+  position: relative;
+}
