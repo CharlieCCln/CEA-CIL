@@ -4,12 +4,9 @@
   let imageModelURL = 'https://teachablemachine.withgoogle.com/models/90SoxnKhs/';
 
   // Video
-  let capture;
-  let flippedVideo;
+  let video;
   // To store the classification
   let label = "";
-
-  let ratio;
 
   // Load the model first
   function preload() {
@@ -27,32 +24,23 @@
      }
    });
     video.size(windowWidth, windowHeight);
-    //video.elt.setAttribute('playsinline');
-    //video.hide();
 
-    flippedVideo = ml5.flipImage(video);
     // Start classifying
     classifyVideo();
   }
 
   function draw() {
     background(0);
-    // Draw the video
-    if (frameCount > 0) {
-      image(video, 0, 0, width, width * video.height / video.width);
-    }
 
-    // Draw the label
-    fill(255);
-    textSize(16);
-    textAlign(CENTER);
-    text(label, width / 2, height - 4);
+    // Draw the video
+    image(video, 0, 0, width, width * video.height / video.width);
+
   }
 
   // Get a prediction for the current video frame
   function classifyVideo() {
-    classifier.classify(flippedVideo, gotResult);
-    flippedVideo.remove();
+    classifier.classify(video, gotResult);
+    video.remove();
 
   }
 
@@ -67,6 +55,7 @@
     // The results are in an array ordered by confidence.
     // console.log(results[0]);
     label = results[0].label;
+    console.log(label);
     // Classifiy again!
     classifyVideo();
 
