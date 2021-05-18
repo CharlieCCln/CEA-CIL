@@ -138,7 +138,7 @@ $("#slider").slider({
   max: 100,
   value: 100,
   step: 100/3,
-  change: function(event, ui) {
+  slide: function(event, ui) {
         console.log(ui.value);
         if(ui.value>67){
           $(".apu-image-1").hide();
