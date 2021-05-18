@@ -36,10 +36,9 @@
   }
 
   function draw() {
-    background(150);
-    text(frameCount, 200, 200);
+    background(0);
     // Draw the video
-    if (frameCount > 100) {
+    if (frameCount > 0) {
       image(video, 0, 0, width, width * video.height / video.width);
     }
 
@@ -52,8 +51,6 @@
 
   // Get a prediction for the current video frame
   function classifyVideo() {
-    console.log("classify ????")
-
     classifier.classify(flippedVideo, gotResult);
     flippedVideo.remove();
 
