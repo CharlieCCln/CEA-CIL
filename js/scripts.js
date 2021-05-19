@@ -131,14 +131,17 @@ $(".apu-image-3").hide();
 
 $(".role").on('click', function(){
   $(".role-apu").toggle();
+  $(".role").toggleClass("info-open");
 })
 
 $(".fonctionnement").on('click', function(){
   $(".fonctionnement-apu").toggle();
+  $(".fonctionnement").toggleClass("info-open");
 })
 
 $(".innovations").on('click', function(){
   $(".innovations-apu").toggle();
+  $(".innovations").toggleClass("info-open");
 })
 
 $(".accelerometre").on('click', function(){

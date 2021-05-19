@@ -81,15 +81,20 @@ span{
 }
 
 .role, .fonctionnement, .innovations{
-  width: 375px;
+  width: 250px;
   height: auto;
   padding: 24px;
+  margin-bottom: 24px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.info-open{
+  width: 375px;
 }
 
 p{
