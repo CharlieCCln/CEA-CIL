@@ -137,31 +137,31 @@ $("#slider").slider({
   min: 0,
   max: 100,
   value: 100,
-  slide: function(event, ui) {
+  stop: function(event, ui) {
         console.log(ui.value);
         if(ui.value>75){
           $(".apu-image-1").hide();
           $(".apu-image-2").hide();
           $(".apu-image-3").hide();
-          $("#slider").slider("values", 0, 100);
+          $("#slider").slider("value", 100);
         }
         if(ui.value<75 && ui.value>50){
           $(".apu-image-1").show();
           $(".apu-image-2").hide();
           $(".apu-image-3").hide();
-          $("#slider").slider("values", 0, 2*(100/3));
+          $("#slider").slider("value", 2*(100/3));
         }
         if(ui.value<50 && ui.value>25){
           $(".apu-image-1").hide();
           $(".apu-image-2").show();
           $(".apu-image-3").hide();
-          $("#slider").slider("values", 0, 100/3);
+          $("#slider").slider("value", 100/3);
         }
         if(ui.value<25){
           $(".apu-image-1").hide();
           $(".apu-image-2").hide();
           $(".apu-image-3").show();
-          $("#slider").slider("values", 0, 0);
+          $("#slider").slider("value", 0);
         }
     }
 })
