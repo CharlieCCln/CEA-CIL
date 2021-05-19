@@ -69,10 +69,18 @@ span{
   margin-top: 6px;
 }
 
-.role, .fonctionnement, .innovations{
+.info-row{
   position: absolute;
   left: 96px;
   top: 160px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 375px;
+  height: auto;
+}
+
+.role, .fonctionnement, .innovations{
   width: 375px;
   height: auto;
   padding: 24px;
@@ -82,14 +90,6 @@ span{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.fonctionnement{
-  top: 388px;
-}
-
-.innovations{
-  top: 616px;
 }
 
 p{

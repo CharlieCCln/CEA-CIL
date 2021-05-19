@@ -119,11 +119,27 @@ if (navigator.mediaDevices.getUserMedia) {
 }
 */
 
+$(".role-apu").hide();
+$(".fonctionnement-apu").hide();
+$(".innovations-apu").hide();
+
 $(".usage-gps-role").hide();
 
 $(".apu-image-1").hide();
 $(".apu-image-2").hide();
 $(".apu-image-3").hide();
+
+$(".role").on('click', function(){
+  $(".role-apu").toggle();
+})
+
+$(".fonctionnement").on('click', function(){
+  $(".fonctionnement-apu").toggle();
+})
+
+$(".innovations").on('click', function(){
+  $(".innovations-apu").toggle();
+})
 
 $(".accelerometre").on('click', function(){
   $(".usage-gps-role").toggle();
