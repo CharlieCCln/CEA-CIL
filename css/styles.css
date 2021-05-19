@@ -82,6 +82,7 @@ span{
 
 .role, .fonctionnement, .innovations{
   display: inline-flex;
+  flex-wrap: wrap;
   padding: 24px;
   margin-bottom: 24px;
   -webkit-touch-callout: none;
