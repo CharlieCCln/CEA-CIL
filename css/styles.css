@@ -66,7 +66,7 @@ span{
 .titre{
   font-size: 50pt;
   margin-right: 24px;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .info-row{
@@ -81,8 +81,7 @@ span{
 }
 
 .role, .fonctionnement, .innovations{
-  width: 250px;
-  height: auto;
+  display: inline-flex;
   padding: 24px;
   margin-bottom: 24px;
   -webkit-touch-callout: none;
@@ -178,24 +177,41 @@ p{
   position: absolute;
   top: 160px;
   left: 550px;
-  height: 650px;
+  height: 264px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto 85%;
+  background-size: auto 90%;
 }
 
 .apu-image-1{
   background-image: url("../assets/apu-image-1.jpg");
-  padding-left: 24px;
-  padding-right: 24px;
+  width: 257.5px;
 }
 
 .apu-image-2{
   background-image: url("../assets/apu-image-2.jpg");
+  width: 245.3px;
 }
 
 .apu-image-3{
   background-image: url("../assets/apu-image-3.jpg");
+  width: 308.3px;
+}
+
+.apu-image-1-open, .apu-image-2-open, .apu-image-3-open{
+  height: 650px;
+}
+
+.apu-image-1-open{
+  width: 598.8px;
+}
+
+.apu-image-2-open{
+  width: 568.8px;
+}
+
+.apu-image-3-open{
+  width: 724.1px;
 }
 
 #video{

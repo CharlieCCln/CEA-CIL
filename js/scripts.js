@@ -150,6 +150,18 @@ $(".accelerometre").on('click', function(){
   $(".accelerometre span").toggleClass("usage-composants-selected");
 })
 
+$(".apu-image-1").on('click', function(){
+  $(".apu-image-1").toggleClass("apu-image-1-open");
+})
+
+$(".apu-image-2").on('click', function(){
+  $(".apu-image-2").toggleClass("apu-image-2-open");
+})
+
+$(".apu-image-3").on('click', function(){
+  $(".apu-image-3").toggleClass("apu-image-3-open");
+})
+
 $("#slider").slider({
   orientation: "vertical",
   range: "min",
