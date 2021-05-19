@@ -180,38 +180,39 @@ p{
   height: 264px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto 90%;
+  background-size: auto 85%;
 }
 
 .apu-image-1{
   background-image: url("../assets/apu-image-1.jpg");
-  width: 257.5px;
+  width: 273.5px;
 }
 
 .apu-image-2{
   background-image: url("../assets/apu-image-2.jpg");
-  width: 245.3px;
+  width: 261.3px;
 }
 
 .apu-image-3{
   background-image: url("../assets/apu-image-3.jpg");
-  width: 308.3px;
+  width: 324.3px;
 }
 
 .apu-image-1-open, .apu-image-2-open, .apu-image-3-open{
   height: 650px;
+  background-size: auto 95%;
 }
 
 .apu-image-1-open{
-  width: 598.8px;
+  width: 646.8px;
 }
 
 .apu-image-2-open{
-  width: 568.8px;
+  width: 616.8px;
 }
 
 .apu-image-3-open{
-  width: 724.1px;
+  width: 772.1px;
 }
 
 #video{
