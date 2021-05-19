@@ -173,7 +173,6 @@ p{
   position: absolute;
   top: 160px;
   left: 550px;
-  width: 750px;
   height: 650px;
   background-repeat: no-repeat;
   background-position: center;
@@ -182,6 +181,8 @@ p{
 
 .apu-image-1{
   background-image: url("../assets/apu-image-1.jpg");
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .apu-image-2{
