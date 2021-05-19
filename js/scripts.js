@@ -143,25 +143,25 @@ $("#slider").slider({
           $(".apu-image-1").hide();
           $(".apu-image-2").hide();
           $(".apu-image-3").hide();
-          $("#slider").slider("value", 100);
+          $("#slider").slider("values", 0, 100);
         }
         if(ui.value<75 && ui.value>50){
           $(".apu-image-1").show();
           $(".apu-image-2").hide();
           $(".apu-image-3").hide();
-          $("#slider").slider("value", 2*(100/3));
+          $("#slider").slider("values", 0, 2*(100/3));
         }
         if(ui.value<50 && ui.value>25){
           $(".apu-image-1").hide();
           $(".apu-image-2").show();
           $(".apu-image-3").hide();
-          $("#slider").slider("value", 100/3);
+          $("#slider").slider("values", 0, 100/3);
         }
         if(ui.value<25){
           $(".apu-image-1").hide();
           $(".apu-image-2").hide();
           $(".apu-image-3").show();
-          $("#slider").slider("value", 0);
+          $("#slider").slider("values", 0, 0);
         }
     }
 })
