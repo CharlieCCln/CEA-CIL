@@ -137,28 +137,31 @@ $("#slider").slider({
   min: 0,
   max: 100,
   value: 100,
-  step: 100/3,
   slide: function(event, ui) {
         console.log(ui.value);
-        if(ui.value>67){
+        if(ui.value>75){
           $(".apu-image-1").hide();
           $(".apu-image-2").hide();
           $(".apu-image-3").hide();
+          $("#slider").slider("value", 100);
         }
-        if(ui.value<67 && ui.value>66){
+        if(ui.value<75 && ui.value>50){
           $(".apu-image-1").show();
           $(".apu-image-2").hide();
           $(".apu-image-3").hide();
+          $("#slider").slider("value", 2*(100/3));
         }
-        if(ui.value<34 && ui.value>33){
+        if(ui.value<50 && ui.value>25){
           $(".apu-image-1").hide();
           $(".apu-image-2").show();
           $(".apu-image-3").hide();
+          $("#slider").slider("value", 100/3);
         }
-        if(ui.value<33){
+        if(ui.value<25){
           $(".apu-image-1").hide();
           $(".apu-image-2").hide();
           $(".apu-image-3").show();
+          $("#slider").slider("value", 0);
         }
     }
 })
