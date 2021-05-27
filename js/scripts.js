@@ -1,7 +1,7 @@
 // Classifier Variable
   let classifier;
   // Model URL
-  let imageModelURL = 'https://teachablemachine.withgoogle.com/models/SPfvBqa_U/';
+  let imageModelURL = 'https://teachablemachine.withgoogle.com/models/lIAiQGGPl/';
 
   // Video
   let capture;
