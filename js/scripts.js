@@ -1,11 +1,14 @@
+/* ----- P5JS TEACHABLE MACHINE ----- */
+
 // Classifier Variable
   let classifier;
-  // Model URL
+  // Teachable Machine Model URL
   let imageModelURL = 'https://teachablemachine.withgoogle.com/models/lIAiQGGPl/';
 
   // Video
   let capture;
   let flippedVideo;
+
   // To store the classification
   let label = "";
   let labels = {};
@@ -30,9 +33,8 @@
      }
    });
     video.size(windowWidth, windowHeight);
-    //video.elt.setAttribute('playsinline');
-    //video.hide();
 
+    // Flip the video (not necessary for tablet)
     flippedVideo = ml5.flipImage(video);
     // Start classifying
     classifyVideo();
@@ -43,6 +45,7 @@
     // Draw the video
     image(video, 0, 0, width, width * video.height / video.width);
 
+    // Show the interface according to which card is detected
     if(label == "vide"){
       $(".composant").hide();
       $(".usage").hide();
@@ -103,53 +106,33 @@
 
   }
 
+  /* ----- JQUERY & JQUERY UI INTERFACES ----- */
+
 $(document).ready(function(){
-
-/*
-var video = document.querySelector("#video");
-
-if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(function (stream) {
-      video.srcObject = stream;
-    })
-    .catch(function (err0r) {
-      console.log("Something went wrong!");
-    });
-}
-*/
 
 $(".role-apu").hide();
 $(".fonctionnement-apu").hide();
 $(".innovations-apu").hide();
-
 $(".usage-gps-role").hide();
-
 $(".apu-image-1").hide();
 $(".apu-image-2").hide();
 $(".apu-image-3").hide();
 
+// Mode "Composant" : click to open
 $(".role").on('click', function(){
   $(".role-apu").toggle();
   $(".role").toggleClass("info-open");
 })
-
 $(".fonctionnement").on('click', function(){
   $(".fonctionnement-apu").toggle();
   $(".fonctionnement").toggleClass("info-open");
 })
-
 $(".innovations").on('click', function(){
   $(".innovations-apu").toggle();
   $(".innovations").toggleClass("info-open");
 })
 
-$(".accelerometre").on('click', function(){
-  $(".usage-gps-role").toggle();
-  $(".accelerometre").toggleClass("usage-composants-selected");
-  $(".accelerometre span").toggleClass("usage-composants-selected");
-})
-
+// Mode "Composant" : click to open (images)
 $(".apu-image-1").on('click', function(){
   $(".apu-image-1").toggleClass("apu-image-1-open");
 })
@@ -162,6 +145,14 @@ $(".apu-image-3").on('click', function(){
   $(".apu-image-3").toggleClass("apu-image-3-open");
 })
 
+// Mode "Usage" : click to open
+$(".accelerometre").on('click', function(){
+  $(".usage-gps-role").toggle();
+  $(".accelerometre").toggleClass("usage-composants-selected");
+  $(".accelerometre span").toggleClass("usage-composants-selected");
+})
+
+// Mode "Composant" : slider
 $("#slider").slider({
   orientation: "vertical",
   range: "min",
@@ -171,24 +162,28 @@ $("#slider").slider({
   stop: function(event, ui) {
         console.log(ui.value);
         if(ui.value>75){
+          // slider on top : show nothing
           $(".apu-image-1").hide();
           $(".apu-image-2").hide();
           $(".apu-image-3").hide();
           $("#slider").slider("value", 100);
         }
         if(ui.value<75 && ui.value>50){
+          // slider at 1/3 : show image 1
           $(".apu-image-1").show();
           $(".apu-image-2").hide();
           $(".apu-image-3").hide();
           $("#slider").slider("value", 2*(100/3));
         }
         if(ui.value<50 && ui.value>25){
+          // slider at 2/3 : show image 2
           $(".apu-image-1").hide();
           $(".apu-image-2").show();
           $(".apu-image-3").hide();
           $("#slider").slider("value", 100/3);
         }
         if(ui.value<25){
+          // slider on bottom : show image 3
           $(".apu-image-1").hide();
           $(".apu-image-2").hide();
           $(".apu-image-3").show();
